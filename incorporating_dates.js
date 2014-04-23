@@ -88,6 +88,10 @@ function CopyIt(){
   //The next two are defined in script
   var target6 = targetsheet.getRange("O"+(last_row+1));   
   var target7 = targetsheet.getRange("Q"+(last_row+1));
+  
+    // Just using the text to put this data, so there is no source range above.   
+  target6.setValue('Flyer');
+  target7.setValue('This job was imported from a Org Learning\'s Class Reservation Form and followup will be required for clarification'); 
     
     //Date and Time
     var target8 = targetsheet.getRange("U"+ " "+ (last_row+1));
@@ -100,7 +104,8 @@ function CopyIt(){
     var target15 = targetsheet.getRange("U"+ " "+ (last_row+1));
     var target16 = targetsheet.getRange("U"+ " "+ (last_row+1));
     var target17 = targetsheet.getRange("U"+ " "+ (last_row+1));
-    
+	
+	
   // Put the data from the source sheet into the target sheet, after adding a new row
     targetsheet.insertRowAfter(last_row);
     target1.setValues(source_range1_values);
@@ -119,10 +124,5 @@ function CopyIt(){
     target16.setValues(source_range14_values);
     target17.setValues(source_range15_values);
  
-  // Just using the text to put this data, so there is no source range above.   
-  target6.setValue('Flyer');
-  target7.setValue('This job was imported from a Org Learning\'s Class Reservation Form and followup will be required for clarification');    
-    
-    
   }
 }  
